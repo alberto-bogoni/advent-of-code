@@ -24,7 +24,7 @@ public class TrebuchetTest {
     public void testFindDigitsWithOneNumber() {
         Map<String, Character> expected = new HashMap<>();
         expected.put(Trebuchet.LEFT_DIGIT, '4');
-        expected.put(Trebuchet.RIGHT_DIGIT, ' ');
+        expected.put(Trebuchet.RIGHT_DIGIT, '4');
 
         String line = "4sbvcnsjdmkddddddddd";
 
@@ -42,7 +42,6 @@ public class TrebuchetTest {
         expected.put(Trebuchet.RIGHT_DIGIT, ' ');
 
         String line = "";
-
 
         Map<String, Character> result = Trebuchet.findDigits(line);
 
@@ -103,6 +102,36 @@ public class TrebuchetTest {
         expected.put(Trebuchet.RIGHT_DIGIT, '2');
 
         String line = "ddtwo34dddnitwouuu";
+
+        Map<String, Character> result = Trebuchet.findDigits(line);
+
+        Assert.assertEquals(2, result.size());
+        Assert.assertEquals(expected.get(Trebuchet.LEFT_DIGIT), result.get(Trebuchet.LEFT_DIGIT));
+        Assert.assertEquals(expected.get(Trebuchet.RIGHT_DIGIT), result.get(Trebuchet.RIGHT_DIGIT));
+    }
+
+    @Test
+    public void find_composed_spelled_digits() {
+        Map<String, Character> expected = new HashMap<>();
+        expected.put(Trebuchet.LEFT_DIGIT, '8');
+        expected.put(Trebuchet.RIGHT_DIGIT, '3');
+
+        String line = "eighthree";
+
+        Map<String, Character> result = Trebuchet.findDigits(line);
+
+        Assert.assertEquals(2, result.size());
+        Assert.assertEquals(expected.get(Trebuchet.LEFT_DIGIT), result.get(Trebuchet.LEFT_DIGIT));
+        Assert.assertEquals(expected.get(Trebuchet.RIGHT_DIGIT), result.get(Trebuchet.RIGHT_DIGIT));
+    }
+
+    @Test
+    public void find_() {
+        Map<String, Character> expected = new HashMap<>();
+        expected.put(Trebuchet.LEFT_DIGIT, '8');
+        expected.put(Trebuchet.RIGHT_DIGIT, '3');
+
+        String line = "4oneone4453";
 
         Map<String, Character> result = Trebuchet.findDigits(line);
 

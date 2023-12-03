@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class Trebuchet {
     public final static String LEFT_DIGIT = "leftDigit";
@@ -45,32 +43,30 @@ public class Trebuchet {
         conversion.put("eight", '8');
         conversion.put("nine", '9');
 
-        StringBuilder leftWord = new StringBuilder();
-        StringBuilder rightWord = new StringBuilder();
-        for (int left = 0, right = line.length() - 1; left <= right;) {
-            if (conversion.containsKey(leftWord.toString())) {
-                result.put(LEFT_DIGIT, conversion.get(leftWord.toString()));
-                leftWord.setLength(0);
-            } else if (result.get(LEFT_DIGIT) == ' ') {
-                if (Character.isDigit(line.charAt(left))) {
-                    result.put(LEFT_DIGIT, line.charAt(left));
-                }
-                leftWord.append(line.charAt(left));
-                left++;
-            }
-            if (result.get(RIGHT_DIGIT) == ' ') {
-                if (conversion.containsKey(rightWord.toString())) {
-                    result.put(RIGHT_DIGIT, conversion.get(rightWord.toString()));
-                    rightWord.setLength(0);
-                } else if (Character.isDigit(line.charAt(right))) {
-                    result.put(RIGHT_DIGIT, line.charAt(right));
-                }
-                rightWord.insert(0, line.charAt(right));
-                right--;
-            }
+        List<Character> foundDigits = new LinkedList<>();
+        for (int windowStart = 0, windowEnd = 0; windowEnd < line.length(); windowEnd++) {
+            if (conversion.containsKey(line.substring(windowStart, windowEnd + 1))) {
+               foundDigits.add(conversion.get(line.substring(windowStart, windowEnd + 1)));
+                windowStart = windowEnd;
+           }
 
-            if (result.get(RIGHT_DIGIT) != ' ' && result.get(LEFT_DIGIT) != ' ')
-                break;
+            if (Character.isDigit(line.charAt(windowEnd))) {
+                if (line.substring(windowStart, windowEnd).length() < 3) {
+                    foundDigits.add(line.charAt(windowEnd));
+                    windowStart = windowEnd + 1;
+                } else {
+                    windowStart++;
+                    windowEnd = windowStart;
+                }
+            } else if ((windowEnd - windowStart) > 5) {
+               windowStart++;
+               windowEnd = windowStart;
+           }
+        }
+
+        if (!foundDigits.isEmpty()) {
+            result.put(LEFT_DIGIT, foundDigits.get(0));
+            result.put(RIGHT_DIGIT, foundDigits.get(foundDigits.size() - 1));
         }
 
         return result;
