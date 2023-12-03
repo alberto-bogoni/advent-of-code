@@ -1,0 +1,14 @@
+D:\AdventOfCode\bin\Debug\net8.0\AdventOfCode.exe
+D:\AdventOfCode\bin\Debug\net8.0\AdventOfCode.deps.json
+D:\AdventOfCode\bin\Debug\net8.0\AdventOfCode.runtimeconfig.json
+D:\AdventOfCode\bin\Debug\net8.0\AdventOfCode.dll
+D:\AdventOfCode\bin\Debug\net8.0\AdventOfCode.pdb
+D:\AdventOfCode\obj\Debug\net8.0\AdventOfCode.GeneratedMSBuildEditorConfig.editorconfig
+D:\AdventOfCode\obj\Debug\net8.0\AdventOfCode.AssemblyInfoInputs.cache
+D:\AdventOfCode\obj\Debug\net8.0\AdventOfCode.AssemblyInfo.cs
+D:\AdventOfCode\obj\Debug\net8.0\AdventOfCode.csproj.CoreCompileInputs.cache
+D:\AdventOfCode\obj\Debug\net8.0\AdventOfCode.dll
+D:\AdventOfCode\obj\Debug\net8.0\refint\AdventOfCode.dll
+D:\AdventOfCode\obj\Debug\net8.0\AdventOfCode.pdb
+D:\AdventOfCode\obj\Debug\net8.0\AdventOfCode.genruntimeconfig.cache
+D:\AdventOfCode\obj\Debug\net8.0\ref\AdventOfCode.dll
