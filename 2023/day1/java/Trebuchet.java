@@ -32,6 +32,9 @@ public class Trebuchet {
         result.put(LEFT_DIGIT, ' ');
         result.put(RIGHT_DIGIT, ' ');
 
+        if (line.equals(" ") || line.isEmpty())
+            return result;
+
         Map<String, Character> conversion = new HashMap<>();
         conversion.put("one", '1');
         conversion.put("two", '2');
@@ -43,31 +46,28 @@ public class Trebuchet {
         conversion.put("eight", '8');
         conversion.put("nine", '9');
 
-        List<Character> foundDigits = new LinkedList<>();
         for (int windowStart = 0, windowEnd = 0; windowEnd < line.length(); windowEnd++) {
             if (conversion.containsKey(line.substring(windowStart, windowEnd + 1))) {
-               foundDigits.add(conversion.get(line.substring(windowStart, windowEnd + 1)));
+                line = line.replace(line.substring(windowStart, windowEnd + 1), conversion.get(line.substring(windowStart, windowEnd + 1)) + line.substring(windowStart, windowEnd + 1).substring(1));
                 windowStart = windowEnd;
-           }
+            }
 
             if (Character.isDigit(line.charAt(windowEnd))) {
                 if (line.substring(windowStart, windowEnd).length() < 3) {
-                    foundDigits.add(line.charAt(windowEnd));
                     windowStart = windowEnd + 1;
                 } else {
                     windowStart++;
                     windowEnd = windowStart;
                 }
             } else if ((windowEnd - windowStart) > 5) {
-               windowStart++;
-               windowEnd = windowStart;
-           }
+                windowStart++;
+                windowEnd = windowStart;
+            }
         }
 
-        if (!foundDigits.isEmpty()) {
-            result.put(LEFT_DIGIT, foundDigits.get(0));
-            result.put(RIGHT_DIGIT, foundDigits.get(foundDigits.size() - 1));
-        }
+        String resulting = line.replaceAll("[^0-9]", "");
+        result.put(LEFT_DIGIT, resulting.charAt(0));
+        result.put(RIGHT_DIGIT, resulting.charAt(resulting.length() - 1));
 
         return result;
     }

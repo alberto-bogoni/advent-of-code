@@ -128,10 +128,10 @@ public class TrebuchetTest {
     @Test
     public void find_() {
         Map<String, Character> expected = new HashMap<>();
-        expected.put(Trebuchet.LEFT_DIGIT, '8');
-        expected.put(Trebuchet.RIGHT_DIGIT, '3');
+        expected.put(Trebuchet.LEFT_DIGIT, '4');
+        expected.put(Trebuchet.RIGHT_DIGIT, '1');
 
-        String line = "4oneone4453";
+        String line = "4onesevenone";
 
         Map<String, Character> result = Trebuchet.findDigits(line);
 
