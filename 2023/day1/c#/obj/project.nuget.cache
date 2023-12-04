@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/33ZBs8RA+qnyJglMKdJlXlpkFmDfgDD7e5K3tsoBydurkuLQc8ZVIPbIAGs+dP5Njw8OBWScc2EnYGyzhwWow==",
+  "dgSpecHash": "JpMEq5DiIs0Wfzn6eAz1AN3vOKRM98nf0xEXG7pOUR2xv3bWLh1n57KlrwuHJqSCSLl3HocWTy6qAJoQYWd5tQ==",
   "success": true,
-  "projectFilePath": "D:\\AdventOfCode\\AdventOfCode.csproj",
+  "projectFilePath": "C:\\Users\\tomir\\Documents\\GitHub\\advent-of-code\\2023\\day1\\c#\\AdventOfCode.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
