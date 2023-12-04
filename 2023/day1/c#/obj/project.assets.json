@@ -8,34 +8,25 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Marco\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\tomir\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AdventOfCode\\AdventOfCode.csproj",
+      "projectUniqueName": "C:\\Users\\tomir\\Documents\\GitHub\\advent-of-code\\2023\\day1\\c#\\AdventOfCode.csproj",
       "projectName": "AdventOfCode",
-      "projectPath": "D:\\AdventOfCode\\AdventOfCode.csproj",
-      "packagesPath": "C:\\Users\\Marco\\.nuget\\packages\\",
-      "outputPath": "D:\\AdventOfCode\\obj\\",
+      "projectPath": "C:\\Users\\tomir\\Documents\\GitHub\\advent-of-code\\2023\\day1\\c#\\AdventOfCode.csproj",
+      "packagesPath": "C:\\Users\\tomir\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tomir\\Documents\\GitHub\\advent-of-code\\2023\\day1\\c#\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\tomir\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\weblink\\dataloaderAkeneo_light\\GRABBER\\Abot": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {

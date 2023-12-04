@@ -11,7 +11,7 @@ class Program
 
         Test.TestAll();
 
-        var list = File.ReadAllLines(@"D:\AdventOfCode\values.txt");
+        var list = File.ReadAllLines(@"values.txt");
         list = list.Select(x => x.Trim().ToLower()).ToArray();
 
         foreach (string row in list)
